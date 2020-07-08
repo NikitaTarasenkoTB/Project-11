@@ -1,4 +1,6 @@
-class AddFormPopup extends FormPopup {
+import FormPopup from './FormPopup.js';
+
+export default class AddFormPopup extends FormPopup {
   constructor(popupElement, openButton, closeButton, formValidator, api, cardList, card) {
     super(popupElement, openButton, closeButton, formValidator, api);
     this._cardList = cardList;

@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
   constructor(imagePopup, api) {
     this._imagePopup = imagePopup;
     this._api = api;

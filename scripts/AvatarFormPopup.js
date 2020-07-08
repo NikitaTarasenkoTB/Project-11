@@ -1,4 +1,6 @@
-class AvatarFormPopup extends FormPopup {
+import FormPopup from './FormPopup.js';
+
+export default class AvatarFormPopup extends FormPopup {
   constructor(popupElement, openButton, closeButton, formValidator, api, userInfo) {
     super(popupElement, openButton, closeButton, formValidator, api);
     this._userInfo = userInfo;

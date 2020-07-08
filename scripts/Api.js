@@ -1,4 +1,4 @@
-class Api {
+export default class Api {
   constructor(serverUrl, apiHeaders) {
     this._serverUrl = serverUrl;
     this._serverUrlUserInfo = `${serverUrl}/users/me`;
@@ -10,17 +10,6 @@ class Api {
   _responseValidation(response) {
     return response.ok ? response.json() : Promise.reject(response.status);
   }
-
-  // async getUserInfo() {
-  //   const fetchResponse = await fetch(`${this._serverUrlUserInfo}`, {
-  //       headers: this._apiHeaders,
-  //   });
-  //   if(fetchResponse.ok) {
-  //     return await fetchResponse.json();
-  //   } else {
-  //     throw fetchResponse.status;
-  //   }
-  // }
 
   getUserInfo() {
     return fetch(`${this._serverUrlUserInfo}`, {

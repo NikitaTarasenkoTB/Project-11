@@ -1,4 +1,6 @@
-class FormValidator {
+import errors from './errors.js';
+
+export default class FormValidator {
   constructor() {
     this._formInputsValidityHandler = this._formInputsValidityHandler.bind(this);
   }

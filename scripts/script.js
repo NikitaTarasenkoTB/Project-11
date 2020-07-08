@@ -1,3 +1,15 @@
+import "../pages/index.css";
+
+import Api from './Api.js';
+import ImagePopup from './ImagePopup.js';
+import UserInfo from './UserInfo.js';
+import Card from './Card.js';
+import CardList from './CardList.js';
+import FormValidator from './FormValidator.js';
+import AddFormPopup from './AddFormPopup.js';
+import EditFormPopup from './EditFormPopup';
+import AvatarFormPopup from './AvatarFormPopup.js';
+
 const [popupAdd, popupEdit, popupAvatar, popupImage] = document.querySelectorAll('.popup');
 const addButton = document.querySelector('.user-info__button');
 const editButton = document.querySelector('.user-info__edit-button');
@@ -27,36 +39,3 @@ const formValidator = new FormValidator();
 new AddFormPopup(popupAdd, addButton, closeButton, formValidator, api, cardList, card);
 new EditFormPopup(popupEdit, editButton, closeButtonEdit, formValidator, api, userInfo);
 new AvatarFormPopup(popupAvatar, avatarButton, avatarCloseButton, formValidator, api, userInfo);
-
-/*
-  Хорошая работа, класс Api создан, запросы к серверу выполняются, отлично, что реализована
-  так же дополнительная часть задания. Однако при организации обмена с сервером есть несколько
-  замечаний:
-
-  Надо исправить:
-  + не вызывать в конструкторе классов запрос к серверу, вызывать запрос отдельно после создания класса
-  + обработка ошибок должна быть в конце цепочки обработки промиса, а не в классе Api
-  + все изменения на странице должны происходить только после ответа сервера
-
-  Все подобные места отметил как "Надо исправить" в коде
-
-
-*/
-
-
-/*
-  Отлично, критические замечания исправлены
-
-  Однако не забудьте исправить - закрытие попапов должно так же выполняться только если
-  запрос к серверу выполнился успешно, нужно перенести в блок then
-  
-  Если у Вас будет свободное время попробуйте освоить работу с сервером
-  применив async/await для работы с асинхронными запросами.
-  https://learn.javascript.ru/async-await
-  https://habr.com/ru/company/ruvds/blog/414373/
-  https://www.youtube.com/watch?v=SHiUyM_fFME
-  Это часто используется в реальной работе
-
-  Успехов в дальнейшем обучении!
-
-*/
