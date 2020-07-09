@@ -16,14 +16,17 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: { loader: "babel-loader" },
+        use: { loader: 'babel-loader' },
         exclude: /node_modules/
       },
       {
         test: /\.css$/i,
         use: [
           (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-          'css-loader', 
+          {
+            loader: 'css-loader', 
+            options: { importLoaders: 2 }
+          },
           'postcss-loader'
           ]
       },

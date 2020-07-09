@@ -20,7 +20,7 @@ const userNameElement = document.querySelector('.user-info__name');
 const userAboutElement = document.querySelector('.user-info__job');
 const userAvatarElement = document.querySelector('.user-info__photo');
 
-const serverUrl = 'https://praktikum.tk/cohort11';
+const serverUrl = process.env.NODE_ENV === 'production' ? 'https://praktikum.tk/cohort11' : 'http://praktikum.tk/cohort11';
 const apiHeaders = {
   authorization: '91b74308-54a5-47aa-a76e-98eef3c53923',
   'Content-Type': 'application/json',
