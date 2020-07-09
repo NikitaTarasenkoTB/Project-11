@@ -16,10 +16,7 @@ export default class Api {
       headers: this._apiHeaders,
     })
     .then((response) => this._responseValidation(response))
-    .then((responseData) => {
-      console.log(responseData);
-      return responseData;
-    });
+    .then((responseData) => responseData);
   }
 
   updateUserInfo(newNameInfo, newAboutInfo) {
@@ -32,10 +29,7 @@ export default class Api {
       })
     })
     .then((response) => this._responseValidation(response))
-    .then((responseData) => {
-      console.log(responseData);
-      return responseData;
-    });
+    .then((responseData) => responseData);
   }
 
   getInitialCards() {
@@ -43,10 +37,7 @@ export default class Api {
       headers: this._apiHeaders
     })
     .then((response) => this._responseValidation(response))
-    .then((responseData) => {
-      console.log(responseData);
-      return responseData;
-    });
+    .then((responseData) => responseData);
   }
 
   addCard(cardName, cardLink) {
@@ -59,10 +50,7 @@ export default class Api {
       })
     })
     .then((response) => this._responseValidation(response))
-    .then((responseData) => {
-      console.log(responseData);
-      return responseData;
-    });
+    .then((responseData) => responseData);
   }
 
   deleteCard(cardId) {
@@ -71,7 +59,7 @@ export default class Api {
       headers: this._apiHeaders,
     })
     .then((response) => this._responseValidation(response))
-    .then((responseData) => console.log(responseData))
+    .then((responseData) => responseData);
   }
 
   addLike(cardId) {
@@ -80,10 +68,7 @@ export default class Api {
       headers: this._apiHeaders,
     })
     .then((response) => this._responseValidation(response))
-    .then((responseData) => {
-      console.log(responseData);
-      return responseData;
-    })
+    .then((responseData) => responseData);
   }
 
   deleteLike(cardId) {
@@ -92,10 +77,7 @@ export default class Api {
       headers: this._apiHeaders,
     })
     .then((response) => this._responseValidation(response))
-    .then((responseData) => {
-      console.log(responseData);
-      return responseData;
-    })
+    .then((responseData) => responseData);
   }
 
   updateUserAvatar(avatarUrl) {
@@ -107,9 +89,6 @@ export default class Api {
       })
     })
     .then((response) => this._responseValidation(response))
-    .then((responseData) => {
-      console.log(responseData);
-      return responseData;
-    })
+    .then((responseData) => responseData);
   }
 }
